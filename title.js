@@ -6,6 +6,7 @@ const body = document.querySelector("body");
 
 links.forEach((link) => {
   link.addEventListener("mouseenter", () => {
+    console.log(link.getAttribute("data-title"));
     title.innerText = link.getAttribute("data-title");
 
     body.classList.add("hovered");
@@ -15,6 +16,7 @@ links.forEach((link) => {
   });
 
   link.addEventListener("mouseleave", () => {
+    console.log(link.getAttribute("data-title"));
     title.innerText = "PORTFOLIO";
 
     body.classList.remove("hovered");

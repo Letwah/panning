@@ -1,3 +1,5 @@
+console.log("title.js is being executed");
+
 const title = document.querySelector("h1");
 const links = document.querySelectorAll("section a");
 const body = document.querySelector("body");

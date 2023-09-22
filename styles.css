@@ -34,16 +34,16 @@ body {
   transition: background-color 1s, color 1s;
 }
 
-body.orange {
+.orange {
   --text-color: #e15d28;
 }
 
-body.mint {
+.mint {
   --background-color: #f4fbf8;
   --text-color: #cbf3e1;
 }
 
-body.purple {
+.purple {
   --text-color: #ccc4f1;
 }
 

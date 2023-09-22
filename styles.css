@@ -10,8 +10,8 @@
 
 :root {
   --background-color: #ffffff;
-  --text-color: #003344;
-  --grid-line: #00000011;
+  --text-color: #1a3c2e;
+  --grid-line: #ff000011;
 }
 
 body {
@@ -60,7 +60,6 @@ section {
   grid-template-rows: repeat(3, 1fr);
 
   gap: 240px;
-
   touch-action: none;
 }
 

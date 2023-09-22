@@ -1,11 +1,25 @@
 const title = document.querySelector("h1");
-
-const links = document.querySelectorAll("section.pan a");
+const links = document.querySelectorAll("section a");
+const body = document.querySelector("body");
 
 //add loop so links work by them selves
 
 links.forEach((link) => {
   link.addEventListener("mouseenter", () => {
-    title.innerText = "hovering now";
+    title.innerText = link.getAttribute("data-title");
+
+    body.classList.add("hovered");
+    link.classList.add("hovered");
+
+    body.classList.add(link.getAttribute("data-color"));
+  });
+
+  link.addEventListener("mouseleave", () => {
+    title.innerText = "PORTFOLIO";
+
+    body.classList.remove("hovered");
+    link.classList.remove("hovered");
+
+    body.classList.remove(link.getAttribute("data-color"));
   });
 });

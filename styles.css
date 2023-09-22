@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "ABC Monument Grotesk";
+  src: url(ABCMonumentGrotesk-Regular-Trial.woff2);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #003344;
+  --grid-line: #00000011;
+}
+
+body {
+  font-family: "ABC Monument Grotesk", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.05;
+
+  background-size: 32px 32px;
+  background-image: linear-gradient(
+      to right,
+      var(--grid-line) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-position: center center;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  transition: background-color 1s, color 1s;
+}
+
+body.orange {
+  --text-color: #e15d28;
+}
+
+body.mint {
+  --background-color: #f4fbf8;
+  --text-color: #cbf3e1;
+}
+
+body.purple {
+  --text-color: #ccc4f1;
+}
+
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3000px;
+  height: 2400px;
+
+  display: grid;
+  padding: 120px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 240px;
+
+  touch-action: none;
+}
+
+section a {
+  display: block;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section img {
+  max-width: 100%;
+  max-height: 560px;
+  transition: opacity 0.25s, transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 0 16px #00000000;
+}
+
+h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+
+  font-size: 120px;
+}
+
+body.hovered img {
+  opacity: 0.1;
+}
+
+body.hovered a.hovered img {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0 16px #00000033;
+}

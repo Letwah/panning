@@ -10,7 +10,7 @@
 
 :root {
   --background-color: #ffffff;
-  --text-color: #1a3c2e;
+  --text-color: #1e1e1e;
   --grid-line: #ff000011;
 }
 
@@ -20,12 +20,18 @@ body {
   line-height: 1.05;
 
   background-size: 32px 32px;
-  background-image: linear-gradient(
+  height: 100vh;
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(255, 0, 0, 0.493) 2px,
+    transparent 0
+  );
+  /* background-image: linear-gradient(
       to right,
       var(--grid-line) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px); */
   background-position: center center;
 
   background-color: var(--background-color);
@@ -35,16 +41,16 @@ body {
 }
 
 .orange {
-  --text-color: #e15d28;
+  --text-color: #ff4800e4;
 }
 
 .mint {
   --background-color: #f4fbf8;
-  --text-color: #cbf3e1;
+  --text-color: #0026e3e0;
 }
 
 .purple {
-  --text-color: #ccc4f1;
+  --text-color: #ff0f0fe1;
 }
 
 section {
@@ -59,7 +65,7 @@ section {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
 
-  gap: 240px;
+  gap: 200px;
   touch-action: none;
 }
 
@@ -88,6 +94,7 @@ h1 {
   pointer-events: none;
 
   font-size: 120px;
+  mix-blend-mode: difference;
 }
 
 body.hovered img {
